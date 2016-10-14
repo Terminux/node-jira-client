@@ -343,6 +343,20 @@ export default class JiraApi {
     }));
   }
 
+  /** Delete an issue link between two issues
+   *  @name deleteIssueLink
+   *  @function
+   *  @param {string} issueId - the issue link id
+   */
+  deleteIssueLink(issueLinkId) {
+    return this.doRequest(this.makeRequestHeader(this.makeUri({
+      pathname: `/issueLink/${issueLinkId}`,
+    }), {
+      method: 'DELETE',
+      followAllRedirects: true
+    }));
+  }
+
   /** Retrieves the remote links associated with the given issue.
    * @name getRemoteLinks
    * @function
