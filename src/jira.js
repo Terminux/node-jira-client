@@ -357,6 +357,16 @@ export default class JiraApi {
     }));
   }
 
+  /** Get issue link types
+   *  @name getIssueLinkTypes
+   *  @function
+   */
+  getIssueLinkType() {
+    return this.doRequest(this.makeRequestHeader(this.makeUri({
+      pathname: `/issueLink`,
+    })));
+  }
+
   /** Retrieves the remote links associated with the given issue.
    * @name getRemoteLinks
    * @function
