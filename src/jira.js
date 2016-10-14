@@ -361,7 +361,7 @@ export default class JiraApi {
    *  @name getIssueLinkTypes
    *  @function
    */
-  getIssueLinkType() {
+  getIssueLinkTypes() {
     return this.doRequest(this.makeRequestHeader(this.makeUri({
       pathname: `/issueLink`,
     })));
